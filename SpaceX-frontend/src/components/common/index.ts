@@ -1,4 +1,5 @@
+import Button from './button';
 import Loader from './loader';
 import { ErrorBoundary } from './errorBoundary';
 
-export { Loader, ErrorBoundary };
+export { Button, Loader, ErrorBoundary };
