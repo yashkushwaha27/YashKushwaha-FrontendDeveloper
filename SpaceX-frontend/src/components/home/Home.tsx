@@ -7,6 +7,13 @@ import { useStyles } from './home.styles';
 import { Button } from '@components/common';
 
 /**
+ * Method to scroll a div into view
+ * @param {string} id
+ */
+const bringIntoView = (id: string) =>
+  document.getElementById(id)?.scrollIntoView({ block: 'nearest' });
+
+/**
  * Method to render home component
  * @returns {JSX.Element}
  */
@@ -22,10 +29,13 @@ const Home = (): JSX.Element => {
   );
 
   /**
-   * Method to render the home label text
+   * Method to render page content
    */
-  const textToRender = useMemo(() => {
-    return (
+  const contentToRender = useMemo(() => {
+    /**
+     * constant to render the home label text
+     */
+    const textToRender = (
       <div css={styles.homeTextWrapper}>
         <ReactTyped
           css={styles.homeHeadingText}
@@ -43,20 +53,31 @@ const Home = (): JSX.Element => {
         />
       </div>
     );
-  }, [styles]);
 
-  /**
-   * Method to render the button pair
-   */
-  const buttonsToRender = useMemo(() => {
-    return (
+    /**
+     * constant to render the button pair
+     */
+    const buttonsToRender = (
       <div css={styles.homeCapsulesButtonWrapper}>
-        <Button customStyles={styles.homeCapsuleButton}>
+        <Button
+          onClick={() => bringIntoView('upcomingCapsules')}
+          customStyles={styles.homeCapsuleButton}
+        >
           {content.homePage_upcomingCapsules_buttonText}
         </Button>
-        <Button variant="secondary">
+        <Button
+          onClick={() => bringIntoView('previousCapsules')}
+          variant="secondary"
+        >
           {content.homePage_previousCapsules_buttonText}
         </Button>
+      </div>
+    );
+
+    return (
+      <div css={styles.homeContentWrapper}>
+        {textToRender}
+        {buttonsToRender}
       </div>
     );
   }, [styles]);
@@ -69,8 +90,7 @@ const Home = (): JSX.Element => {
         init={particlesInit}
         css={styles.homeParticles}
       />
-      {textToRender}
-      {buttonsToRender}
+      {contentToRender}
     </div>
   );
 };

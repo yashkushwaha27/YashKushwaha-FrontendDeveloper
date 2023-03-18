@@ -1,7 +1,8 @@
 export const zIndex = {
-  particles: 1,
+  particles: 0,
+  base: 1,
   home: 2,
   header: 3,
   backdrop: 4,
-  drawer: 5,
+  modal: 5,
 };

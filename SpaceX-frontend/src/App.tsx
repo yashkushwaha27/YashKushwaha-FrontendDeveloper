@@ -4,6 +4,7 @@ import Main from './Main';
 import { PoppinsFonts } from '@theme/fontsFamily';
 
 import Header from '@components/header';
+import { colors } from '@theme/colors';
 
 const App = () => (
   <HashRouter>
@@ -18,6 +19,8 @@ const App = () => (
             padding: 0,
             margin: 0,
             fontFamily: "'Poppins','sans-sarif'",
+            background: colors.black,
+            scrollBehavior: 'smooth',
           },
         },
       ]}

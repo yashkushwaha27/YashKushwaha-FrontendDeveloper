@@ -12,23 +12,32 @@ export const useStyles = () => {
         buttonWrapper: {
           borderRadius: 12,
           padding: '8px 12px',
-          border: '1px solid white',
-          transition: '0.3s ease-all',
+          transition: '0.3s',
           '&:hover': {
             cursor: 'pointer',
           },
         },
+        buttonBorder: {
+          border: `1px solid ${colors.white}`,
+        },
         buttonPrimary: {
           background: colors.white,
           color: colors.black,
+          '&:hover': {
+            background: 'transparent',
+            color: colors.white,
+          },
         },
         buttonSecondary: {
           background: 'transparent',
           color: colors.white,
+          '&:hover': {
+            background: colors.white,
+            color: colors.black,
+          },
         },
         buttonHover: {
           '&:hover': {
-            cursor: 'pointer',
             boxShadow: `0px 0px 20px ${colors.white}`,
           },
         },
