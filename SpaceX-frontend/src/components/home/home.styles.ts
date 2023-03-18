@@ -22,7 +22,7 @@ export const useStyles = () => {
           padding: isMobile ? 20 : 30,
         },
         homeParticles: {
-          zIndex: zIndex.particles,
+          opacity: 0.5,
         },
         homeTextWrapper: {
           display: 'flex',
@@ -44,9 +44,16 @@ export const useStyles = () => {
           display: 'flex',
           alignItems: 'center',
           paddingTop: 40,
+          zIndex: zIndex.home,
         },
         homeCapsuleButton: {
           marginRight: isMobile ? 8 : 16,
+        },
+        homeContentWrapper: {
+          display: 'flex',
+          flexDirection: 'column',
+          position: 'absolute',
+          top: '20%',
         },
       } as const),
     [isMobile]

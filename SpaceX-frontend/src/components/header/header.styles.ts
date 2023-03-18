@@ -19,6 +19,13 @@ export const useStyles = () => {
           color: colors.white,
           width: isMobile ? 125 : 250,
         },
+        headerButton: {
+          display: 'flex',
+          alignItems: 'center',
+        },
+        headerSearchIcon: {
+          paddingRight: 8,
+        },
       } as const),
     [isMobile]
   );

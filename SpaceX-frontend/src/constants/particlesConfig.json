@@ -1,4 +1,5 @@
 {
+  "fullScreen": false,
   "particles": {
     "number": {
       "value": 40,
@@ -40,7 +41,7 @@
       "out_mode": "bounce",
       "bounce": false,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 1200
       }

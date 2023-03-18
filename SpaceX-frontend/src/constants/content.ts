@@ -1,4 +1,5 @@
 export const content: IObject = {
+  global_missions_text: 'Missions',
   header_button_text: 'Search Capsules',
 
   homePage_heading_text: 'A leap into the unknown...',
