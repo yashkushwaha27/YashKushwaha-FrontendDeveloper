@@ -3,6 +3,8 @@ import { Global, css } from '@emotion/react';
 import Main from './Main';
 import { PoppinsFonts } from '@theme/fontsFamily';
 
+import Header from '@components/header';
+
 const App = () => (
   <HashRouter>
     <Global
@@ -11,7 +13,7 @@ const App = () => (
           ${PoppinsFonts}
         `,
         {
-          'html, body, main, #root': {
+          'html, body, #root': {
             height: '100%',
             padding: 0,
             margin: 0,
@@ -20,6 +22,7 @@ const App = () => (
         },
       ]}
     />
+    <Header />
     <Main />
   </HashRouter>
 );
